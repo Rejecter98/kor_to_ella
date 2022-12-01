@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    </head>
+    <body>
+        <h1>kor</h1><br>
+        <input type="text" id="kor" name="kor"><br>
+        <h1>to ella</h1><br>
+        <input type="text" class="ella" id="ella" name="ella">
+    </body>
+
+    <script src="resource/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inko@1.1.1/inko.min.js"></script>
+
+    <script>
+        var Inko = require('inko');
+        var inko = new Inko();
+
+        // ES6
+        import Inko from 'inko';
+        let inko = new Inko();
+        inko.ko2en('ㅗ디ㅣㅐ 재깅!');
+        
+    </script>
+
+    <script>
+        $("#kor").on("propertychange change keyup paste input", function() {
+            let kor = $("#kor").val();
+            $("#ella").attr("value", kor);
+        })
+    </script>
+
+
+</html>
